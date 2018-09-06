@@ -6,4 +6,5 @@ public class Rogue extends Character {
         name = "Rôdeur";
     }
 
+
 }
