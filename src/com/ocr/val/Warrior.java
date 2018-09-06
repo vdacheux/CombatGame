@@ -1,5 +1,9 @@
 package com.ocr.val;
 
-public class CharacterClass extends Character {
+public class Warrior extends Character {
+
+    public Warrior(){
+        name = "Guerrier";
+    }
 
 }
