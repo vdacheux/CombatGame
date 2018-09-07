@@ -8,25 +8,26 @@ public class Player {
     Character characterClass;
     String name;
 
-    public Player(String str){
+    public Player(String str) {
         this.name = str;
     }
 
     public void characterCreation() {
         System.out.println("Création du personnage du " + this.name);
         chooseClass();
+        chooseLevel();
 
     }
 
     /**
-     *Permet à l'utilisateur de choisir la classe de son personnage parmi les trois proposées.
+     * Permet à l'utilisateur de choisir la classe de son personnage parmi les trois proposées.
      * Boucle tant que le choix n'est pas correct.
      */
-    public void chooseClass(){
+    public void chooseClass() {
         int choix = 0;
         Scanner sc = new Scanner(System.in);
-        do {
 
+        do {
             System.out.println("Veuillez choisir la classe de votre personnage (1 : Guerrier, 2 : Rôdeur, 3 : Mage)");
 
             if (!sc.hasNextInt()) {
@@ -34,22 +35,22 @@ public class Player {
                 sc.next();
                 continue;
             }
-            choix = sc.nextByte();
+            choix = sc.nextInt();
             switch (choix) {
 
                 case 1:
                     this.characterClass = new Warrior();
-                    System.out.println("Vous êtes un "+this.getCharacterClassName());
+                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 case 2:
                     this.characterClass = new Rogue();
-                    System.out.println("Vous êtes un "+this.getCharacterClassName());
+                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 case 3:
                     this.characterClass = new Mage();
-                    System.out.println("Vous êtes un "+this.getCharacterClassName());
+                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 default:
@@ -58,9 +59,33 @@ public class Player {
         } while (choix != 1 && choix != 2 && choix != 3);
     }
 
-    public void chooseLevel(){
+    /**
+     * Permet à l'utilisateur de choisir le niveau de son personnage.
+     * Boucle tant que le niveau n'est pas un chiffre compris entre 1 et 100 inclus.
+     */
+    public void chooseLevel() {
+        Scanner sc = new Scanner(System.in);
+        int level = 0;
+        System.out.println("Niveau du personnage ?");
 
+        do {
+            if (!sc.hasNextInt()) {
+                System.out.println("Veuillez entrer un nombre compris entre 1 et 100.");
+                sc.next();
+                continue;
+            }
+            level = sc.nextInt();
+
+            if (level < 1 || level > 100) {
+                System.out.println("Veuillez entrer un nombre compris entre 1 et 100.");
+                continue;
+            }
+        }while (!(level >= 1 && level <= 100)) ;
+
+            this.characterClass.level = level;
     }
+
+
 
     public void chooseIntelligence(){
 
