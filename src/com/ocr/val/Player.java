@@ -1,6 +1,5 @@
 package com.ocr.val;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Player {
@@ -19,11 +18,19 @@ public class Player {
         chooseStrength();
         chooseAgility();
         chooseIntelligence();
+        this.characterClass.health = this.characterClass.level * 5;
+        this.characterClass.battleCry();
+        System.out.println("Je suis un "+this.getCharacterClassName()+" de niveau "+this.characterClass.level+". " +
+                "J'ai "+this.characterClass.health+" vitalité, "+this.characterClass.strength+" Force, "+this.characterClass.agility+
+                " Agilité et "+this.characterClass.intelligence+" Intelligence.");
 
     }
 
     /**
      * Permet à l'utilisateur de choisir la classe de son personnage parmi les trois proposées.
+     * @see Warrior
+     * @see Rogue
+     * @see Mage
      * Boucle tant que le choix n'est pas correct.
      */
     public void chooseClass() {
@@ -61,6 +68,7 @@ public class Player {
 
     /**
      * Permet à l'utilisateur de choisir le niveau de son personnage.
+     * @see Character#level
      * Boucle tant que le niveau n'est pas un chiffre compris entre 1 et 100 inclus.
      */
     public void chooseLevel() {
@@ -87,6 +95,7 @@ public class Player {
 
     /**
      * Permet à l'utilisateur de choisir la force de son personnagge.
+     * @see Character#strength
      * La statistique ne peut pas dépasser le niveau du personnage.
      */
     public void chooseStrength(){
@@ -117,6 +126,7 @@ public class Player {
 
     /**
      * Permet à l'utilisateur de choisir l'agilité de son personnagge.
+     * @see Character#agility
      * La somme de ses statistique ne peut pas dépasser le niveau du personnage.
      */
     public void chooseAgility(){
@@ -149,6 +159,7 @@ public class Player {
 
     /**
      * Permet à l'utilisateur de choisir l'intelligence de son personnagge.
+     * @see Character#intelligence
      * La somme de ses statistique ne peut pas dépasser le niveau du personnage.
      */
     public void chooseIntelligence(){
@@ -178,8 +189,40 @@ public class Player {
 
         this.characterClass.intelligence = intelligence;
     }
-    
+
+    /**
+     * Permet à l'utilisateur de choisir une action à effectuer.
+     * @see Character#basicAttack()
+     * @see Character#spell()
+     */
     public void chooseAction(){
+        Scanner sc = new Scanner(System.in);
+        int choix = 0;
+
+        do {
+            System.out.println(this.getCharacterClassName()+" (Vitalité : "+this.characterClass.getHealth()+"), veuillez" +
+                    " choisir une action : 1. Attaque basique, 2. Coup spécial");
+
+            if (!sc.hasNextInt()) {
+                System.out.println("Veuillez choisir parmi les propositions.");
+                sc.next();
+                continue;
+            }
+            choix = sc.nextInt();
+            switch (choix) {
+
+                case 1:
+                    this.characterClass.basicAttack();
+                    break;
+
+                case 2:
+                    this.characterClass.spell();
+                    break;
+
+                default:
+                    System.out.println("Veuillez choisir parmi les propositions.");
+            }
+        } while (choix != 1 && choix != 2);
 
     }
 

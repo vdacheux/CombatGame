@@ -12,6 +12,9 @@ public class Character {
     public Character() {
     }
 
+    /**
+     * Attaque basique
+     */
     public void basicAttack(){
     }
 
@@ -23,6 +26,8 @@ public class Character {
 
     public void takeDamage(){
     }
+
+    public void battleCry(){}
 
     //Getters
     public int getIntelligence() {
