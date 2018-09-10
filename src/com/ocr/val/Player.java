@@ -16,6 +16,7 @@ public class Player {
         System.out.println("Création du personnage du " + this.name);
         chooseClass();
         chooseLevel();
+        chooseStrength();
 
     }
 
@@ -85,20 +86,39 @@ public class Player {
             this.characterClass.level = level;
     }
 
-
-
-    public void chooseIntelligence(){
-
-    }
-
+    /**
+     * Permet à l'utilisateur de choisir la force de son personnagge.
+     * La statistique ne peut pas dépasser le niveau du personnage.
+     */
     public void chooseStrength(){
+        Scanner sc = new Scanner(System.in);
+        int strength = 0;
+        System.out.println("Force du personnage ?");
 
+        do {
+            if (!sc.hasNextInt()) {
+                System.out.println("Veuillez entrer un nombre compris entre 1 et 100.");
+                sc.next();
+                continue;
+            }
+            strength = sc.nextInt();
+
+            if (strength > this.characterClass.level) {
+                System.out.println("Les statistiques de votre personnage ne peuvent pas dépasser son niveau.");
+                continue;
+            }
+        }while (!(strength <= this.characterClass.level)) ;
+
+        this.characterClass.strength = strength;
     }
 
     public void chooseAgility(){
 
     }
 
+    public void chooseIntelligence(){
+
+    }
     public void chooseAction(){
 
     }
