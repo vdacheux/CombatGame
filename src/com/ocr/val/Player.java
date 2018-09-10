@@ -17,6 +17,7 @@ public class Player {
         chooseClass();
         chooseLevel();
         chooseStrength();
+        chooseAgility();
 
     }
 
@@ -41,17 +42,14 @@ public class Player {
 
                 case 1:
                     this.characterClass = new Warrior();
-                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 case 2:
                     this.characterClass = new Rogue();
-                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 case 3:
                     this.characterClass = new Mage();
-                    System.out.println("Vous êtes un " + this.getCharacterClassName());
                     break;
 
                 default:
@@ -92,12 +90,12 @@ public class Player {
      */
     public void chooseStrength(){
         Scanner sc = new Scanner(System.in);
-        int strength = 0;
+        int strength = -1;
         System.out.println("Force du personnage ?");
 
         do {
             if (!sc.hasNextInt()) {
-                System.out.println("Veuillez entrer un nombre compris entre 1 et 100.");
+                System.out.println("Veuillez entrer un nombre compris entre 0 et le niveau de votre personnage ("+this.characterClass.level+").");
                 sc.next();
                 continue;
             }
@@ -107,13 +105,45 @@ public class Player {
                 System.out.println("Les statistiques de votre personnage ne peuvent pas dépasser son niveau.");
                 continue;
             }
-        }while (!(strength <= this.characterClass.level)) ;
+            else if (strength < 0){
+                System.out.println("Vous devez entrer un nombre positif.");
+                continue;
+            }
+        }while (!(strength <= this.characterClass.level) || strength < 0) ;
 
         this.characterClass.strength = strength;
     }
 
+    /**
+     * Permet à l'utilisateur de choisir l'agilité de son personnagge.
+     * La somme de ses statistique ne peut pas dépasser le niveau du personnage.
+     */
     public void chooseAgility(){
+        Scanner sc = new Scanner(System.in);
+        int agility = -1;
+        int statSum = 0;
+        System.out.println("Agilité du personnage ?");
 
+        do {
+            if (!sc.hasNextInt()) {
+                System.out.println("Veuillez entrer un nombre compris entre 0 et le niveau de votre personnage ("+this.characterClass.level+").");
+                sc.next();
+                continue;
+            }
+            agility = sc.nextInt();
+            statSum = agility + this.characterClass.strength;
+
+            if (statSum > this.characterClass.level) {
+                System.out.println("Les statistiques de votre personnage ne peuvent pas dépasser son niveau.");
+                continue;
+            }
+            else if (agility < 0){
+                System.out.println("Vous devez entrer un nombre positif.");
+                continue;
+            }
+        }while (statSum > this.characterClass.level || agility < 0) ;
+
+        this.characterClass.agility = agility;
     }
 
     public void chooseIntelligence(){
