@@ -7,10 +7,16 @@ public class Player {
     Character characterClass;
     String name;
 
+    /**
+     * @param str Nom du joueur
+     */
     public Player(String str) {
         this.name = str;
     }
 
+    /**
+     * Initie la procédure de création de personnage.
+     */
     public void characterCreation() {
         System.out.println("Création du personnage du " + this.name);
         chooseClass();
@@ -226,6 +232,9 @@ public class Player {
 
     }
 
+    /**
+     * @return Classe du personnage.
+     */
     public String getCharacterClassName(){
         return this.characterClass.name;
     }

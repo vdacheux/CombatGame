@@ -6,5 +6,18 @@ public class Rogue extends Character {
         name = "Rôdeur";
     }
 
+    @Override
+    public void basicAttack() {
+        super.basicAttack();
+    }
 
+    @Override
+    public void spell() {
+        super.spell();
+    }
+
+    @Override
+    public void battleCry() {
+        System.out.print("Lok'tar ! ");
+    }
 }

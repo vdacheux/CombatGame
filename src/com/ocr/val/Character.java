@@ -12,16 +12,10 @@ public class Character {
     public Character() {
     }
 
-    /**
-     * Attaque basique
-     */
     public void basicAttack(){
     }
 
     public void spell(){
-    }
-
-    public void chooseAction(){
     }
 
     public void takeDamage(){
