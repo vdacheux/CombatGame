@@ -18,6 +18,7 @@ public class Player {
         chooseLevel();
         chooseStrength();
         chooseAgility();
+        chooseIntelligence();
 
     }
 
@@ -146,9 +147,38 @@ public class Player {
         this.characterClass.agility = agility;
     }
 
+    /**
+     * Permet à l'utilisateur de choisir l'intelligence de son personnagge.
+     * La somme de ses statistique ne peut pas dépasser le niveau du personnage.
+     */
     public void chooseIntelligence(){
+        Scanner sc = new Scanner(System.in);
+        int intelligence = -1;
+        int statSum = 0;
+        System.out.println("Intelligence du personnage ?");
 
+        do {
+            if (!sc.hasNextInt()) {
+                System.out.println("Veuillez entrer un nombre compris entre 0 et le niveau de votre personnage ("+this.characterClass.level+").");
+                sc.next();
+                continue;
+            }
+            intelligence = sc.nextInt();
+            statSum = intelligence + this.characterClass.strength + this.characterClass.agility;
+
+            if (statSum > this.characterClass.level) {
+                System.out.println("Les statistiques de votre personnage ne peuvent pas dépasser son niveau.");
+                continue;
+            }
+            else if (intelligence < 0){
+                System.out.println("Vous devez entrer un nombre positif.");
+                continue;
+            }
+        }while (statSum > this.characterClass.level || intelligence < 0) ;
+
+        this.characterClass.intelligence = intelligence;
     }
+    
     public void chooseAction(){
 
     }
