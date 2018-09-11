@@ -245,6 +245,7 @@ public class Player {
      */
     public void takeDamage(){
         this.characterClass.health = this.characterClass.health - Combat.currentAttack;
+        System.out.println(this.name+" perd "+Combat.currentAttack+" points de vie.");
     }
 
     /**
