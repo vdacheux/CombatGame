@@ -8,7 +8,8 @@ public class Rogue extends Character {
 
     @Override
     public void basicAttack() {
-        super.basicAttack();
+        System.out.println(this.player+" tire une flèche et inflige "+this.getAgility()+" dégats.");
+        Combat.currentAttack = this.getAgility();
     }
 
     @Override

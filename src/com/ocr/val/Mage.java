@@ -8,7 +8,8 @@ public class Mage extends Character {
 
     @Override
     public void basicAttack() {
-        super.basicAttack();
+        System.out.println(this.player+" projette une boule de feu et inflige "+this.getIntelligence()+" dégats.");
+        Combat.currentAttack = this.getIntelligence();
     }
 
     @Override
