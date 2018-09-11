@@ -7,6 +7,10 @@ public class Mage extends Character {
     }
 
     @Override
+    /**
+     * Attaque de base qui inflige à l'adversaire des dégats égaux à l'intelligence de l'attaquant.
+     * @see Character#intelligence
+     */
     public void basicAttack() {
         System.out.println(this.player+" projette une boule de feu et inflige "+this.getIntelligence()+" dégats.");
         Combat.currentAttack = this.getIntelligence();

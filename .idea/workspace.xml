@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7c4d613-8f50-4181-b2bd-c6a989cb5302" name="Default Changelist" comment="Merge branch 'master' of https://github.com/vdacheux/CombatGame&#10;&#10;# Conflicts:&#10;#&#9;src/com/ocr/val/Mage.java&#10;#&#9;src/com/ocr/val/Player.java&#10;#&#9;src/com/ocr/val/Rogue.java&#10;#&#9;src/com/ocr/val/Warrior.java">
+      <change beforePath="$PROJECT_DIR$/src/com/ocr/val/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ocr/val/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ocr/val/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ocr/val/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ocr/val/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ocr/val/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ocr/val/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ocr/val/Warrior.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,12 +47,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="7475" />
+          <entry key="java" value="7658" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7475" />
+          <entry key="JAVA" value="7658" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -91,12 +93,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="method#Character#0;class#Character#0" />
-                <element signature="method#basicAttack#0;class#Character#0" />
                 <element signature="method#spell#0;class#Character#0" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,15 +118,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Warrior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="7" />
               <folding>
                 <element signature="e#84#85#0" expanded="true" />
                 <element signature="e#117#118#0" expanded="true" />
-                <element signature="e#211#212#0" expanded="true" />
-                <element signature="e#240#241#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Rogue.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="e#80#81#0" expanded="true" />
                 <element signature="e#111#112#0" expanded="true" />
@@ -140,7 +153,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Mage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="e#79#80#0" expanded="true" />
                 <element signature="e#108#109#0" expanded="true" />
@@ -181,11 +194,11 @@
         <option value="$PROJECT_DIR$/src/com/ocr/val/CharacterClass.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/CharacterTest.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/CombatTest.java" />
-        <option value="$PROJECT_DIR$/src/com/ocr/val/Character.java" />
-        <option value="$PROJECT_DIR$/src/com/ocr/val/Warrior.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/Combat.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/ocr/val/Character.java" />
+        <option value="$PROJECT_DIR$/src/com/ocr/val/Warrior.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/Rogue.java" />
         <option value="$PROJECT_DIR$/src/com/ocr/val/Mage.java" />
       </list>
@@ -237,7 +250,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536684050755" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536684345011" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -376,27 +389,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Character.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="method#Character#0;class#Character#0" />
-            <element signature="method#basicAttack#0;class#Character#0" />
             <element signature="method#spell#0;class#Character#0" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Warrior.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="7" />
           <folding>
             <element signature="e#84#85#0" expanded="true" />
             <element signature="e#117#118#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -404,7 +428,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Rogue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="e#80#81#0" expanded="true" />
             <element signature="e#111#112#0" expanded="true" />
@@ -419,7 +443,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ocr/val/Mage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="e#79#80#0" expanded="true" />
             <element signature="e#108#109#0" expanded="true" />
