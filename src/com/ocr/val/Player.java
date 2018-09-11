@@ -12,12 +12,18 @@ public class Player {
      */
     public Player(String str) {
         this.name = str;
+        characterCreation();
     }
 
     /**
      * Initie la procédure de création de personnage.
      */
     public void characterCreation() {
+        if (this.name == "Joueur 1")
+            Combat.attackingPlayer = this;
+        else
+            Combat.defendingPlayer = this;
+
         System.out.println("Création du personnage du " + this.name);
         chooseClass();
         chooseLevel();
@@ -27,8 +33,8 @@ public class Player {
         this.characterClass.health = this.characterClass.level * 5;
         this.characterClass.battleCry();
         System.out.println("Je suis un "+this.getCharacterClassName()+" de niveau "+this.characterClass.level+". " +
-                "J'ai "+this.characterClass.health+" vitalité, "+this.characterClass.strength+" Force, "+this.characterClass.agility+
-                " Agilité et "+this.characterClass.intelligence+" Intelligence.");
+                "J'ai "+this.characterClass.health+" de Vitalité, "+this.characterClass.strength+" de Force, "+this.characterClass.agility+
+                " d'Agilité et "+this.characterClass.intelligence+" d'Intelligence.");
 
     }
 
@@ -70,6 +76,7 @@ public class Player {
                     System.out.println("Veuillez choisir parmi les propositions.");
             }
         } while (choix != 1 && choix != 2 && choix != 3);
+        this.characterClass.player = this.name;
     }
 
     /**
@@ -206,7 +213,7 @@ public class Player {
         int choix = 0;
 
         do {
-            System.out.println(this.getCharacterClassName()+" (Vitalité : "+this.characterClass.getHealth()+"), veuillez" +
+            System.out.println(this.name+" (Vitalité : "+this.characterClass.getHealth()+"), veuillez" +
                     " choisir une action : 1. Attaque basique, 2. Coup spécial");
 
             if (!sc.hasNextInt()) {
@@ -230,6 +237,14 @@ public class Player {
             }
         } while (choix != 1 && choix != 2);
 
+    }
+
+    /**
+     * Retire à la vitalité du joueur la valeur de l'attaque adverse.
+     * @see Combat#currentAttack
+     */
+    public void takeDamage(){
+        this.characterClass.health = this.characterClass.health - Combat.currentAttack;
     }
 
     /**

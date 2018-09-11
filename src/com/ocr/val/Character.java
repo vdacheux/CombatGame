@@ -8,6 +8,7 @@ public class Character {
     int health;
     int level;
     String name;
+    String player;
 
     public Character() {
     }
@@ -16,9 +17,6 @@ public class Character {
     }
 
     public void spell(){
-    }
-
-    public void takeDamage(){
     }
 
     public void battleCry(){}
@@ -47,4 +45,5 @@ public class Character {
     public String getName() {
         return name;
     }
+
 }

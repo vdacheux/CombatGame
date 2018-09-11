@@ -18,6 +18,6 @@ public class Rogue extends Character {
 
     @Override
     public void battleCry() {
-        System.out.print("Lok'tar ! ");
+        System.out.print("Chut... ");
     }
 }
