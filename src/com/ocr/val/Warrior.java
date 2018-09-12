@@ -17,8 +17,16 @@ public class Warrior extends Character {
     }
 
     @Override
+    /**
+     * Attaque spéciale qui inflige à l'adversaire le double de la force du lanceur. Le lanceur subit des dégats
+     * égaux à sa force divisée par 2.
+     * @see Character#strength
+     */
     public void spell() {
-        super.spell();
+        System.out.println(this.player+" frappe avec rage et inflige "+this.getStrength()*2+" dégats !");
+        System.out.println(this.player+" se blesse en frappant et subit "+this.getStrength()/2+" dégats.");
+        this.health = this.health - this.getStrength()/2;
+        Combat.currentAttack = this.getStrength()*2;
     }
 
     @Override

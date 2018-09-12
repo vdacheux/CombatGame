@@ -23,6 +23,6 @@ public class Rogue extends Character {
 
     @Override
     public void battleCry() {
-        System.out.print("Chut... ");
+        System.out.print("Un soleil rouge se lève... ");
     }
 }
