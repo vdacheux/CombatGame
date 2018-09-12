@@ -1,5 +1,7 @@
 package com.ocr.val;
 
+import java.util.Random;
+
 public class Mage extends Character {
 
     public Mage() {
@@ -23,6 +25,21 @@ public class Mage extends Character {
 
     @Override
     public void battleCry() {
-        System.out.print("Expeliarmus ! ");
+        Random rand = new Random();
+        int  n = rand.nextInt(3) + 1;
+
+        switch (n){
+            case 1:
+                System.out.print("Expeliarmus ! ");
+                break;
+
+            case 2:
+                System.out.print("Wabbajack ! ");
+                break;
+
+            case 3:
+                System.out.print("SHAZAM ! ");
+        }
+
     }
 }

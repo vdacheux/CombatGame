@@ -1,5 +1,7 @@
 package com.ocr.val;
 
+import java.util.Random;
+
 public class Warrior extends Character {
 
     public Warrior(){
@@ -31,6 +33,21 @@ public class Warrior extends Character {
 
     @Override
     public void battleCry() {
-        System.out.print("Lok'tar ! ");
+        Random rand = new Random();
+        int  n = rand.nextInt(3) + 1;
+
+        switch (n){
+            case 1:
+                System.out.print("Lok'tar ! ");
+                break;
+
+            case 2:
+                System.out.print("À l'assaut ! ");
+                break;
+
+            case 3:
+                System.out.print("Par Crom ! ");
+        }
+
     }
 }

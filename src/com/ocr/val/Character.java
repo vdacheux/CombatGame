@@ -19,6 +19,9 @@ public class Character {
     public void spell(){
     }
 
+    /**
+     * Génère un cri de guerre aléatoire parmi 3 possibilités pour le personnage.
+     */
     public void battleCry(){}
 
     //Getters

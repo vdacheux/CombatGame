@@ -1,5 +1,7 @@
 package com.ocr.val;
 
+import java.util.Random;
+
 public class Rogue extends Character {
 
     public Rogue(){
@@ -23,6 +25,21 @@ public class Rogue extends Character {
 
     @Override
     public void battleCry() {
-        System.out.print("Un soleil rouge se lève... ");
+        Random rand = new Random();
+        int  n = rand.nextInt(3) + 1;
+
+        switch (n){
+            case 1:
+                System.out.print("Un soleil rouge se lève... ");
+                break;
+
+            case 2:
+                System.out.print("Où est ma pomme ? ");
+                break;
+
+            case 3:
+                System.out.print("Entre les deux yeux ! ");
+        }
+
     }
 }
