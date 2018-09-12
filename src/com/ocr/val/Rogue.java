@@ -19,8 +19,12 @@ public class Rogue extends Character {
     }
 
     @Override
+    /**
+     * Le personnage gagne son niveau divisé par 2 en agilité.
+     */
     public void spell() {
-        super.spell();
+        System.out.println(this.player+" se concentre et gagne "+this.level/2 +" d'agilité !");
+        this.agility = this.agility + this.level/2;
     }
 
     @Override
